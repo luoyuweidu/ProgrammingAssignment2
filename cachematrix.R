@@ -1,7 +1,7 @@
 ## makeCacheMatrix can cache the already calculated inverse of the given matrix. When we need it, we use the cacheSolve function to retrive the inverse we calculated before.
 ##
 
-## cache the inverse
+## cache the inverse we have calculated
 
 makeCacheMatrix <- function(x = matrix()) {
      inv = NULL
@@ -16,6 +16,8 @@ makeCacheMatrix <- function(x = matrix()) {
     }
 
 ## use cacheSolve(makeCacheMatrix(x=matrix))to get the inverse we cache before.
+
+
 cacheSolve <- function(x, ...) {
            inv = x$getinv()
            if (!is.null(inv)){
